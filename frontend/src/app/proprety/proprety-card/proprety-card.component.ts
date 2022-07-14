@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-proprety-card',
@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proprety-card.component.css']
 })
 export class PropretyCardComponent{
+  @Input() proprety: any;
 
-  Proprety: any = {
-    "Name": "B's House",
-    "Type": "House",
-    "Price": 150000
-  }
 }

@@ -1,12 +1,18 @@
-<div class="row">
-  <div class="shadow-lg col-sm-4">
-    <div class="card p-2">
-      <img src="assets/images/house_default.png" class="propImg" alt="">
-      <div class="card-body">
-        <h2>{{ Proprety.Name}}</h2>
-        <h3>{{ Proprety.Type}}</h3>
-        <h4>{{ Proprety.Price}}</h4>
-      </div>
-    </div>
+<div class="card p-2 m-3">
+  <div class="card-img-wrapper">
+    <img src="assets/images/house_default.png" class="propImg" alt="">
+    <ul class="list-inline text-center member-icons animate">
+      <li class="list-inline-item">
+        <button class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
+      </li>
+      <li class="list-inline-item">
+        <button class="btn btn-primary"><i class="fa-solid fa-address-book"></i></button>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <h2>{{ proprety.Name}}</h2>
+    <h3>{{ proprety.Type}}</h3>
+    <h4>{{ proprety.Price}}</h4>
   </div>
 </div>

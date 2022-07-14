@@ -1,3 +1,5 @@
-<p>
-  proprety-list works!
-</p>
+<div class="row">
+  <div *ngFor="let proprety of propreties" class="shadow-lg col-sm-4">
+    <app-proprety-card [proprety]="proprety"></app-proprety-card>
+  </div>
+</div>
