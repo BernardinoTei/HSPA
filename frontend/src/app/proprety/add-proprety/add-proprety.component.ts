@@ -12,4 +12,8 @@ export class AddPropretyComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log('submtted form');
+
+  }
 }
