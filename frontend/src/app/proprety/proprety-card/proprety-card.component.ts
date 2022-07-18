@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IProprety } from '../IProprety.interface';
 
 @Component({
   selector: 'app-proprety-card',
@@ -6,6 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./proprety-card.component.css']
 })
 export class PropretyCardComponent{
-  @Input() proprety: any;
+  @Input() proprety!: IProprety;
 
 }
