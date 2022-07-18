@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-proprety',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-proprety.component.css']
 })
 export class AddPropretyComponent implements OnInit {
-
+@ViewChild('Form') addPropretyForm!: NgForm;
   constructor() { }
 
   ngOnInit() {
@@ -14,6 +15,7 @@ export class AddPropretyComponent implements OnInit {
 
   onSubmit() {
     console.log('submtted form');
+    console.log(this.addPropretyForm);
 
   }
 }

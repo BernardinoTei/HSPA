@@ -3,21 +3,24 @@
     Add New Proprety
   </div>
   <div class="card-body">
-    <form (submit)="onSubmit()">
+    <form (submit)="onSubmit()" #Form="ngForm">
       <div class="from-group col-12">
         <label>Name</label>
-        <input type="text" class="form-control" placeholder="Name">
+        <input type="text" class="form-control" placeholder="Name" #propName="ngModel" ngModel name="propName" required>
+        <span *ngIf="!propName.valid && propName.touched" class="error-block">
+          Please provide a valid name.
+        </span>
       </div>
       <div class="from-group col-12">
         <label>Type</label>
-        <input type="text" class="form-control" placeholder="Type">
+        <input type="text" class="form-control" placeholder="Type" ngModel name="propType">
       </div>
       <div class="from-group col-12">
         <label>Price</label>
-        <input type="text" class="form-control" placeholder="Price">
+        <input type="text" class="form-control" placeholder="Price" ngModel name="propPrice">
       </div>
       <div class="from-group col-12">
-        <button type="submit" class="btn btn-primary btn-xs m-2" >Save</button>
+        <button [disabled]="!Form.valid"  type="submit" class="btn btn-primary btn-xs m-2" >Save</button>
         <button type="reset" class="btn btn-primary btn-xs" >Cancel</button>
       </div>
     </form>
